@@ -7,7 +7,7 @@ class TinyxmlConan(ConanFile):
     license = "Zlib"
     url = "https://github.com/joakimono/conan-tinyxml"
     homepage = "http://www.grinninglizard.com/tinyxml/"
-    description = "<Description of Tinyxml here>"
+    description = "TinyXML is a simple, small, C++ XML parser that can be easily integrating into other programs."
     settings = "os", "compiler", "build_type", "arch", "os_build", "arch_build"
     generators = "cmake"
     exports = "CMakeLists.txt" , "lib_license/LICENSE"
