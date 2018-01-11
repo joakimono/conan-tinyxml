@@ -10,7 +10,7 @@ class TinyxmlConan(ConanFile):
     description = "<Description of Tinyxml here>"
     settings = "os", "compiler", "build_type", "arch", "os_build", "arch_build"
     generators = "cmake"
-    exports = "CMakeLists.txt" , "LICENSE"
+    exports = "CMakeLists.txt" , "lib_license/LICENSE"
     source_file = "tinyxml_2_6_2.tar.gz"
     source_dir =  "tinyxml"
     
