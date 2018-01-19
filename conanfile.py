@@ -9,11 +9,13 @@ class TinyxmlConan(ConanFile):
     version = "2.6.2"
     license = "Zlib"
     url = "https://github.com/joakimono/conan-tinyxml"
+    author = "Joakim Haugen (joakim.haugen@gmail.com)"
     homepage = "http://www.grinninglizard.com/tinyxml/"
     description = "TinyXML is a simple, small, C++ XML parser that can be easily integrating into other programs."
-    settings = "os", "compiler", "build_type", "arch", "os_build", "arch_build"
+    settings = "os", "compiler", "build_type", "arch"
     generators = "cmake"
-    exports = "CMakeLists.txt" , "lib_license/LICENSE"
+    exports_sources = "CMakeLists.txt"
+    exports = "lib_license/LICENSE"
     source_file = "tinyxml_2_6_2.tar.gz"
     source_dir =  "tinyxml"
     
@@ -30,7 +32,7 @@ class TinyxmlConan(ConanFile):
         cmake.install()
 
     def package(self):
-        self.copy("lib_license/LICENSE", dst="licenses", src=self.source_dir,
+        self.copy("LICENSE", dst="licenses", src="lib_license",
                   ignore_case=True, keep_path=False)
 
     def package_info(self):
