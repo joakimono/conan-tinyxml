@@ -22,10 +22,10 @@ The package is usually consumed using the `conan install` command or a *conanfil
 
    ```
    [requires]
-   tinyxml/[>=2.4.2]@joakimono/stable
+   tinyxml/[>=2.6.2]@joakimono/stable
 
    [options]
-   
+
 
    [imports]
    licenses, * -> ./licenses @ folder=True
